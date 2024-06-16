@@ -1,0 +1,132 @@
+{
+	"id": "a5289803-247e-43b7-a2e7-ae4f02a9cc8e",
+	"name": "Statistics",
+	"timestamp": "2024-06-16T17:46:11.123Z",
+	"collection_id": "35813982-e88fe8fc-d07a-428d-b5c3-6ca43bbcc990",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-16T17:46:10.213Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "cab6134f-7114-486f-bb7c-f809e6442bfc",
+			"name": "utworzenie nowych statystyk",
+			"url": "http://localhost:8080/v1/statistics",
+			"time": 13,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "be9d978a-bf1a-4f31-8500-798388e2dc6f",
+			"name": "aktualizacja Statystyk Użytkownika implementacja funkcjonalności do aktualizacji istniejących statystyk dla użytkownika",
+			"url": "http://localhost:8080/v1/statistics/4",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d7cbc989-148e-4ddf-8e12-245b00259996",
+			"name": "pobranie szczegółów dotyczących statystyk dla danego użytkownika",
+			"url": "http://localhost:8080/v1/statistics/user/1",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "771ba680-f2bc-495b-9090-b85cd9c16c7e",
+			"name": "usunięcie statystyk",
+			"url": "http://localhost:8080/v1/statistics/4",
+			"time": 15,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d6f92664-b808-4c6d-abb7-247aa9a1d1db",
+			"name": "wyszukiwanie wszystkich statystyk gdzie ilość kalorii jest większa niż zdefiniowana",
+			"url": "http://localhost:8080/v1/statistics/calories-gt?calories=5",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 59,
+	"collection": {
+		"requests": [
+			{
+				"id": "cab6134f-7114-486f-bb7c-f809e6442bfc",
+				"method": "POST"
+			},
+			{
+				"id": "be9d978a-bf1a-4f31-8500-798388e2dc6f",
+				"method": "PUT"
+			},
+			{
+				"id": "d7cbc989-148e-4ddf-8e12-245b00259996",
+				"method": "GET"
+			},
+			{
+				"id": "771ba680-f2bc-495b-9090-b85cd9c16c7e",
+				"method": "DELETE"
+			},
+			{
+				"id": "d6f92664-b808-4c6d-abb7-247aa9a1d1db",
+				"method": "GET"
+			}
+		]
+	}
+}

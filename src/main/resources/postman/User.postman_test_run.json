@@ -1,0 +1,275 @@
+{
+	"id": "069ee403-23a1-47ae-b43f-3e5b27e34e04",
+	"name": "User",
+	"timestamp": "2024-06-16T17:46:34.396Z",
+	"collection_id": "35813982-e5556d22-ddd1-40e2-b5cf-f09f65984949",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 12,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-16T17:46:32.858Z",
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "b26392bf-b0a7-40d1-889c-11cc0b7e7c8a",
+			"name": "wylistowanie podstawowych informacji o wszystkich użytkownikach zapisanych w systemie (tylko ID oraz nazwa klienta)",
+			"url": "localhost:8080/v1/users/simple",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a0849261-6890-4e07-b846-3dfe2651039d",
+			"name": "pobranie szczegółów dotyczących wybranego użytkownika (ID, imię, nazwisko, datę urodzenia, e-mail)",
+			"url": "localhost:8080/v1/users/3",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Validate the response array structure": false,
+				"First name and last name should be non-empty strings": false,
+				"Birthdate and email are in a valid format": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the response array structure": {
+					"pass": 0,
+					"fail": 1
+				},
+				"First name and last name should be non-empty strings": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Birthdate and email are in a valid format": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Validate the response array structure": false,
+					"First name and last name should be non-empty strings": false,
+					"Birthdate and email are in a valid format": false
+				}
+			]
+		},
+		{
+			"id": "0056a536-e37f-4ddf-b266-c18b1efad4aa",
+			"name": "utworzenie nowego użytkownika",
+			"url": "localhost:8080/v1/users",
+			"time": 15,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response has the required fields": true,
+				"Email is in a valid format": true,
+				"Birthdate is in a valid date format": true,
+				"Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Birthdate is in a valid date format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response has the required fields": true,
+					"Email is in a valid format": true,
+					"Birthdate is in a valid date format": true,
+					"Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "7d60ed25-7b91-476d-9e03-72bf9065b704",
+			"name": "usunięcie użytkownika",
+			"url": "http://localhost:8080/v1/users/11",
+			"time": 9,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f680b58b-b009-44fd-9faa-07dbad02e304",
+			"name": "wyszukiwanie użytkowników po e-mailu, bez rozróżniania wielkości liter, wyszukujące po fragmencie nazwy (zwracane tylko ID oraz e-mail użytkowników)",
+			"url": "localhost:8080/v1/users/email?email=t",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e463ae8c-656e-48d7-bd93-5510b2a71369",
+			"name": "wyszukiwanie użytkowników po wieku starszym niż zdefiniowany",
+			"url": "http://localhost:8080/v1/users/older-than?age=45",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1e17e309-079b-4608-8cee-1f15a178f2cc",
+			"name": "aktualizowanie użytkowników w systemie (dowolnie wybrany atrybut)",
+			"url": "http://localhost:8080/v1/users/3",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields - Id, firstName, lastName, birthdate, and email": true,
+				"Email is in a valid format": true,
+				"Id is a non-negative integer": true,
+				"Birthdate is in a valid date format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - Id, firstName, lastName, birthdate, and email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Birthdate is in a valid date format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields - Id, firstName, lastName, birthdate, and email": true,
+					"Email is in a valid format": true,
+					"Id is a non-negative integer": true,
+					"Birthdate is in a valid date format": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 78,
+	"collection": {
+		"requests": [
+			{
+				"id": "b26392bf-b0a7-40d1-889c-11cc0b7e7c8a",
+				"method": "GET"
+			},
+			{
+				"id": "a0849261-6890-4e07-b846-3dfe2651039d",
+				"method": "GET"
+			},
+			{
+				"id": "0056a536-e37f-4ddf-b266-c18b1efad4aa",
+				"method": "POST"
+			},
+			{
+				"id": "7d60ed25-7b91-476d-9e03-72bf9065b704",
+				"method": "DELETE"
+			},
+			{
+				"id": "f680b58b-b009-44fd-9faa-07dbad02e304",
+				"method": "GET"
+			},
+			{
+				"id": "e463ae8c-656e-48d7-bd93-5510b2a71369",
+				"method": "GET"
+			},
+			{
+				"id": "1e17e309-079b-4608-8cee-1f15a178f2cc",
+				"method": "PUT"
+			}
+		]
+	}
+}

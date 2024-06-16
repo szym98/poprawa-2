@@ -1,0 +1,1541 @@
+2024-06-16T14:19:34.682+02:00  INFO 19248 --- [           main] com.capgemini.wsb.FitnessTracker         : The following 1 profile is active: "loadInitialData"
+2024-06-16T14:19:35.731+02:00  INFO 19248 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16T14:19:35.810+02:00  INFO 19248 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 3 JPA repository interfaces.
+2024-06-16T14:19:36.720+02:00  INFO 19248 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-16T14:19:36.741+02:00  INFO 19248 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-16T14:19:36.741+02:00  INFO 19248 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-06-16T14:19:36.798+02:00  INFO 19248 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-16T14:19:36.814+02:00  INFO 19248 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2073 ms
+2024-06-16T14:19:36.987+02:00  INFO 19248 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-16T14:19:37.175+02:00  INFO 19248 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-16T14:19:37.175+02:00  INFO 19248 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-16T14:19:37.191+02:00  INFO 19248 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-16T14:19:37.427+02:00  INFO 19248 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16T14:19:37.490+02:00  INFO 19248 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-06-16T14:19:37.542+02:00  INFO 19248 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-16T14:19:37.788+02:00  INFO 19248 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16T14:19:38.809+02:00  INFO 19248 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16T14:19:38.856+02:00  INFO 19248 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16T14:19:39.469+02:00  WARN 19248 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16T14:19:40.281+02:00  INFO 19248 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-06-16T14:19:40.375+02:00  INFO 19248 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-16T14:19:40.391+02:00  INFO 19248 --- [           main] c.c.w.f.loader.InitialDataLoader         : Loading initial data to the database
+2024-06-16T14:19:40.501+02:00  INFO 19248 --- [           main] c.c.w.f.loader.InitialDataLoader         : Finished loading initial data
+2024-06-16T14:19:40.516+02:00  INFO 19248 --- [           main] com.capgemini.wsb.FitnessTracker         : Started FitnessTracker in 6.486 seconds (process running for 7.323)
+2024-06-16T14:20:00.018+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.notification.internal.ReportToEmail.generateReport() with argument[s] = []
+2024-06-16T14:20:00.018+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Starting generation of training reports
+2024-06-16T14:20:00.018+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.user.internal.UserServiceImpl.findAllUsers() with argument[s] = []
+2024-06-16T14:20:00.159+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.user.internal.UserServiceImpl.findAllUsers() with result = [User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), User(id=2, firstName=Ethan, lastName=Taylor, birthdate=1973-06-16, email=Ethan.Taylor@domain.com), User(id=3, firstName=Olivia, lastName=Davis, birthdate=1948-06-16, email=Olivia.Davis@domain.com), User(id=4, firstName=Daniel, lastName=Thomas, birthdate=1990-06-16, email=Daniel.Thomas@domain.com), User(id=5, firstName=Sophia, lastName=Baker, birthdate=1975-06-16, email=Sophia.Baker@domain.com), User(id=6, firstName=Liam, lastName=Jones, birthdate=2001-06-16, email=Liam.Jones@domain.com), User(id=7, firstName=Ava, lastName=Williams, birthdate=2003-06-16, email=Ava.Williams@domain.com), User(id=8, firstName=Noah, lastName=Miller, birthdate=1985-06-16, email=Noah.Miller@domain.com), User(id=9, firstName=Grace, lastName=Anderson, birthdate=1991-06-16, email=Grace.Anderson@domain.com), User(id=10, firstName=Oliver, lastName=Swift, birthdate=1995-06-16, email=Oliver.Swift@domain.com)]
+2024-06-16T14:20:00.159+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Emma.Johnson@domain.com
+2024-06-16T14:20:00.159+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [1]
+2024-06-16T14:20:00.175+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=1, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), startTime=2024-01-19 08:00:00.0, endTime=2024-01-19 09:30:00.0, activityType=RUNNING, distance=10.5, averageSpeed=8.2)]
+2024-06-16T14:20:00.191+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [1]
+2024-06-16T14:20:00.191+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = [Statistics(id=1, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), totalTrainings=1, totalDistance=2.3, totalCaloriesBurned=4)]
+2024-06-16T14:20:00.206+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Emma.Johnson@domain.com
+2024-06-16T14:20:00.206+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:00.206+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:00.206+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 1.
+________________________________________________________________
+
+2024-06-16T14:20:00.206+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:00.206+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: Jakarta Mail version 2.1.2
+DEBUG: URL jar:file:/C:/Users/hp/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.2/jakarta.mail-2.0.2.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: jar:file:/C:/Users/hp/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.2/jakarta.mail-2.0.2.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: /META-INF/javamail.default.providers
+DEBUG: Tables of loaded providers
+DEBUG: Providers Listed By Class Name: {org.eclipse.angus.mail.imap.IMAPStore=jakarta.mail.Provider[STORE,imap,org.eclipse.angus.mail.imap.IMAPStore,Oracle], org.eclipse.angus.mail.smtp.SMTPTransport=jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle], org.eclipse.angus.mail.pop3.POP3Store=jakarta.mail.Provider[STORE,pop3,org.eclipse.angus.mail.pop3.POP3Store,Oracle], org.eclipse.angus.mail.pop3.POP3SSLStore=jakarta.mail.Provider[STORE,pop3s,org.eclipse.angus.mail.pop3.POP3SSLStore,Oracle], org.eclipse.angus.mail.smtp.SMTPSSLTransport=jakarta.mail.Provider[TRANSPORT,smtps,org.eclipse.angus.mail.smtp.SMTPSSLTransport,Oracle], org.eclipse.angus.mail.imap.IMAPSSLStore=jakarta.mail.Provider[STORE,imaps,org.eclipse.angus.mail.imap.IMAPSSLStore,Oracle]}
+DEBUG: Providers Listed By Protocol: {imap=jakarta.mail.Provider[STORE,imap,org.eclipse.angus.mail.imap.IMAPStore,Oracle], smtp=jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle], pop3=jakarta.mail.Provider[STORE,pop3,org.eclipse.angus.mail.pop3.POP3Store,Oracle], imaps=jakarta.mail.Provider[STORE,imaps,org.eclipse.angus.mail.imap.IMAPSSLStore,Oracle], smtps=jakarta.mail.Provider[TRANSPORT,smtps,org.eclipse.angus.mail.smtp.SMTPSSLTransport,Oracle], pop3s=jakarta.mail.Provider[STORE,pop3s,org.eclipse.angus.mail.pop3.POP3SSLStore,Oracle]}
+DEBUG: successfully loaded resource: /META-INF/javamail.default.address.map
+DEBUG: URL jar:file:/C:/Users/hp/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.2/jakarta.mail-2.0.2.jar!/META-INF/javamail.address.map
+DEBUG: successfully loaded resource: jar:file:/C:/Users/hp/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.2/jakarta.mail-2.0.2.jar!/META-INF/javamail.address.map
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Emma.Johnson@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Emma.Johnson@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:01 +0200 (CEST)
+To: Emma.Johnson@domain.com
+Message-ID: <943302655.0.1718540401114@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 1.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Ethan.Taylor@domain.com
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [2]
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=2, user=User(id=2, firstName=Ethan, lastName=Taylor, birthdate=1973-06-16, email=Ethan.Taylor@domain.com), startTime=2024-01-18 15:30:00.0, endTime=2024-01-18 17:00:00.0, activityType=CYCLING, distance=25.0, averageSpeed=18.5)]
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [2]
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = [Statistics(id=2, user=User(id=2, firstName=Ethan, lastName=Taylor, birthdate=1973-06-16, email=Ethan.Taylor@domain.com), totalTrainings=5, totalDistance=6.7, totalCaloriesBurned=8)]
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Ethan.Taylor@domain.com
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 5.
+________________________________________________________________
+
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:04.266+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Ethan.Taylor@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Ethan.Taylor@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:05 +0200 (CEST)
+To: Ethan.Taylor@domain.com
+Message-ID: <405155189.1.1718540405052@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 5.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Olivia.Davis@domain.com
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [3]
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=3, user=User(id=3, firstName=Olivia, lastName=Davis, birthdate=1948-06-16, email=Olivia.Davis@domain.com), startTime=2024-01-17 07:45:00.0, endTime=2024-01-17 09:00:00.0, activityType=WALKING, distance=5.2, averageSpeed=5.8)]
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [3]
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = [Statistics(id=3, user=User(id=3, firstName=Olivia, lastName=Davis, birthdate=1948-06-16, email=Olivia.Davis@domain.com), totalTrainings=9, totalDistance=10.1, totalCaloriesBurned=11)]
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Olivia.Davis@domain.com
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 9.
+________________________________________________________________
+
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:08.199+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Olivia.Davis@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Olivia.Davis@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:08 +0200 (CEST)
+To: Olivia.Davis@domain.com
+Message-ID: <1344346143.2.1718540408941@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 9.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Daniel.Thomas@domain.com
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [4]
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=4, user=User(id=4, firstName=Daniel, lastName=Thomas, birthdate=1990-06-16, email=Daniel.Thomas@domain.com), startTime=2024-01-16 18:00:00.0, endTime=2024-01-16 19:30:00.0, activityType=RUNNING, distance=12.3, averageSpeed=9.0)]
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [4]
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Daniel.Thomas@domain.com
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:12.057+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Daniel.Thomas@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Daniel.Thomas@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:12 +0200 (CEST)
+To: Daniel.Thomas@domain.com
+Message-ID: <464530660.3.1718540412786@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:15.888+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Sophia.Baker@domain.com
+2024-06-16T14:20:15.888+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [5]
+2024-06-16T14:20:15.888+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=5, user=User(id=5, firstName=Sophia, lastName=Baker, birthdate=1975-06-16, email=Sophia.Baker@domain.com), startTime=2024-01-15 12:30:00.0, endTime=2024-01-15 13:45:00.0, activityType=CYCLING, distance=18.7, averageSpeed=15.3)]
+2024-06-16T14:20:15.888+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [5]
+2024-06-16T14:20:15.899+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:20:15.899+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Sophia.Baker@domain.com
+2024-06-16T14:20:15.899+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:15.899+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:15.899+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:20:15.899+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:15.899+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Sophia.Baker@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Sophia.Baker@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:16 +0200 (CEST)
+To: Sophia.Baker@domain.com
+Message-ID: <1482519585.4.1718540416633@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Liam.Jones@domain.com
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [6]
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=6, user=User(id=6, firstName=Liam, lastName=Jones, birthdate=2001-06-16, email=Liam.Jones@domain.com), startTime=2024-01-14 09:00:00.0, endTime=2024-01-14 10:15:00.0, activityType=WALKING, distance=3.5, averageSpeed=4.0)]
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [6]
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Liam.Jones@domain.com
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:19.746+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Liam.Jones@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Liam.Jones@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:20 +0200 (CEST)
+To: Liam.Jones@domain.com
+Message-ID: <113975771.5.1718540420510@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Ava.Williams@domain.com
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [7]
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=7, user=User(id=7, firstName=Ava, lastName=Williams, birthdate=2003-06-16, email=Ava.Williams@domain.com), startTime=2024-01-13 16:45:00.0, endTime=2024-01-13 18:30:00.0, activityType=RUNNING, distance=15.0, averageSpeed=10.8)]
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [7]
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Ava.Williams@domain.com
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:23.641+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+2024-06-16T14:20:24.368+02:00  INFO 19248 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16T14:20:24.368+02:00  INFO 19248 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-16T14:20:24.368+02:00  INFO 19248 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+2024-06-16T14:20:24.477+02:00  INFO 19248 --- [nio-8080-exec-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsController.addStatistics() with argument[s] = [StatisticsDto(id=1, user=null, totalTrainings=3, totalDistance=12.3, totalCaloriesBurned=2345)]
+2024-06-16T14:20:24.477+02:00  INFO 19248 --- [nio-8080-exec-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.user.internal.UserServiceImpl.getUser() with argument[s] = [1]
+2024-06-16T14:20:24.477+02:00  INFO 19248 --- [nio-8080-exec-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.user.internal.UserServiceImpl.getUser() with result = Optional[User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com)]
+2024-06-16T14:20:24.477+02:00  INFO 19248 --- [nio-8080-exec-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.createStatistics() with argument[s] = [Statistics(id=null, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), totalTrainings=3, totalDistance=12.3, totalCaloriesBurned=2345)]
+2024-06-16T14:20:24.477+02:00  INFO 19248 --- [nio-8080-exec-1] c.c.w.f.s.i.StatisticsServiceImpl        : Creating Statistics Statistics(id=null, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), totalTrainings=3, totalDistance=12.3, totalCaloriesBurned=2345)
+2024-06-16T14:20:24.477+02:00  INFO 19248 --- [nio-8080-exec-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.createStatistics() with result = Statistics(id=4, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), totalTrainings=3, totalDistance=12.3, totalCaloriesBurned=2345)
+2024-06-16T14:20:24.477+02:00  INFO 19248 --- [nio-8080-exec-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsController.addStatistics() with result = <201 CREATED Created,Statistics(id=4, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), totalTrainings=3, totalDistance=12.3, totalCaloriesBurned=2345),[Location:"/v1/statistics4"]>
+250 2.1.0 Ok
+RCPT TO:<Ava.Williams@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Ava.Williams@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:24 +0200 (CEST)
+To: Ava.Williams@domain.com
+Message-ID: <196480480.6.1718540424383@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Noah.Miller@domain.com
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [8]
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=8, user=User(id=8, firstName=Noah, lastName=Miller, birthdate=1985-06-16, email=Noah.Miller@domain.com), startTime=2024-01-12 11:30:00.0, endTime=2024-01-12 12:45:00.0, activityType=CYCLING, distance=22.5, averageSpeed=17.2)]
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [8]
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Noah.Miller@domain.com
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:27.507+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Noah.Miller@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Noah.Miller@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:28 +0200 (CEST)
+To: Noah.Miller@domain.com
+Message-ID: <1587473072.7.1718540428233@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Grace.Anderson@domain.com
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [9]
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=9, user=User(id=9, firstName=Grace, lastName=Anderson, birthdate=1991-06-16, email=Grace.Anderson@domain.com), startTime=2024-01-11 07:15:00.0, endTime=2024-01-11 08:30:00.0, activityType=WALKING, distance=4.2, averageSpeed=4.5)]
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [9]
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Grace.Anderson@domain.com
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:31.347+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Grace.Anderson@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Grace.Anderson@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:32 +0200 (CEST)
+To: Grace.Anderson@domain.com
+Message-ID: <2130340752.8.1718540432150@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Oliver.Swift@domain.com
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [10]
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=10, user=User(id=10, firstName=Oliver, lastName=Swift, birthdate=1995-06-16, email=Oliver.Swift@domain.com), startTime=2024-01-10 14:00:00.0, endTime=2024-01-10 15:15:00.0, activityType=RUNNING, distance=11.8, averageSpeed=8.5)]
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [10]
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Oliver.Swift@domain.com
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:20:35.310+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Oliver.Swift@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Oliver.Swift@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:20:36 +0200 (CEST)
+To: Oliver.Swift@domain.com
+Message-ID: <729309875.9.1718540436057@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:20:39.208+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Generation of training reports finished
+2024-06-16T14:20:39.208+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.notification.internal.ReportToEmail.generateReport() with result = null
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.notification.internal.ReportToEmail.generateReport() with argument[s] = []
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Starting generation of training reports
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.user.internal.UserServiceImpl.findAllUsers() with argument[s] = []
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.user.internal.UserServiceImpl.findAllUsers() with result = [User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), User(id=2, firstName=Ethan, lastName=Taylor, birthdate=1973-06-16, email=Ethan.Taylor@domain.com), User(id=3, firstName=Olivia, lastName=Davis, birthdate=1948-06-16, email=Olivia.Davis@domain.com), User(id=4, firstName=Daniel, lastName=Thomas, birthdate=1990-06-16, email=Daniel.Thomas@domain.com), User(id=5, firstName=Sophia, lastName=Baker, birthdate=1975-06-16, email=Sophia.Baker@domain.com), User(id=6, firstName=Liam, lastName=Jones, birthdate=2001-06-16, email=Liam.Jones@domain.com), User(id=7, firstName=Ava, lastName=Williams, birthdate=2003-06-16, email=Ava.Williams@domain.com), User(id=8, firstName=Noah, lastName=Miller, birthdate=1985-06-16, email=Noah.Miller@domain.com), User(id=9, firstName=Grace, lastName=Anderson, birthdate=1991-06-16, email=Grace.Anderson@domain.com), User(id=10, firstName=Oliver, lastName=Swift, birthdate=1995-06-16, email=Oliver.Swift@domain.com)]
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Emma.Johnson@domain.com
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [1]
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=1, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), startTime=2024-01-19 08:00:00.0, endTime=2024-01-19 09:30:00.0, activityType=RUNNING, distance=10.5, averageSpeed=8.2)]
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [1]
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = [Statistics(id=1, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), totalTrainings=1, totalDistance=2.3, totalCaloriesBurned=4), Statistics(id=4, user=User(id=1, firstName=Emma, lastName=Johnson, birthdate=1996-06-16, email=Emma.Johnson@domain.com), totalTrainings=3, totalDistance=12.3, totalCaloriesBurned=2345)]
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Emma.Johnson@domain.com
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 4.
+________________________________________________________________
+
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:00.008+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Emma.Johnson@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Emma.Johnson@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:00 +0200 (CEST)
+To: Emma.Johnson@domain.com
+Message-ID: <1676273363.10.1718540460738@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 4.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Ethan.Taylor@domain.com
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [2]
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=2, user=User(id=2, firstName=Ethan, lastName=Taylor, birthdate=1973-06-16, email=Ethan.Taylor@domain.com), startTime=2024-01-18 15:30:00.0, endTime=2024-01-18 17:00:00.0, activityType=CYCLING, distance=25.0, averageSpeed=18.5)]
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [2]
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = [Statistics(id=2, user=User(id=2, firstName=Ethan, lastName=Taylor, birthdate=1973-06-16, email=Ethan.Taylor@domain.com), totalTrainings=5, totalDistance=6.7, totalCaloriesBurned=8)]
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Ethan.Taylor@domain.com
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 5.
+________________________________________________________________
+
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:03.851+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Ethan.Taylor@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Ethan.Taylor@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:04 +0200 (CEST)
+To: Ethan.Taylor@domain.com
+Message-ID: <928057696.11.1718540464569@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 5.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:07.676+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Olivia.Davis@domain.com
+2024-06-16T14:21:07.676+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [3]
+2024-06-16T14:21:07.676+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=3, user=User(id=3, firstName=Olivia, lastName=Davis, birthdate=1948-06-16, email=Olivia.Davis@domain.com), startTime=2024-01-17 07:45:00.0, endTime=2024-01-17 09:00:00.0, activityType=WALKING, distance=5.2, averageSpeed=5.8)]
+2024-06-16T14:21:07.676+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [3]
+2024-06-16T14:21:07.685+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = [Statistics(id=3, user=User(id=3, firstName=Olivia, lastName=Davis, birthdate=1948-06-16, email=Olivia.Davis@domain.com), totalTrainings=9, totalDistance=10.1, totalCaloriesBurned=11)]
+2024-06-16T14:21:07.685+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Olivia.Davis@domain.com
+2024-06-16T14:21:07.685+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:07.685+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:07.685+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 9.
+________________________________________________________________
+
+2024-06-16T14:21:07.685+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:07.685+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Olivia.Davis@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Olivia.Davis@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:08 +0200 (CEST)
+To: Olivia.Davis@domain.com
+Message-ID: <33475363.12.1718540468434@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 9.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Daniel.Thomas@domain.com
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [4]
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=4, user=User(id=4, firstName=Daniel, lastName=Thomas, birthdate=1990-06-16, email=Daniel.Thomas@domain.com), startTime=2024-01-16 18:00:00.0, endTime=2024-01-16 19:30:00.0, activityType=RUNNING, distance=12.3, averageSpeed=9.0)]
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [4]
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Daniel.Thomas@domain.com
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:11.580+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Daniel.Thomas@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Daniel.Thomas@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:12 +0200 (CEST)
+To: Daniel.Thomas@domain.com
+Message-ID: <52764431.13.1718540472355@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:15.522+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Sophia.Baker@domain.com
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [5]
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=5, user=User(id=5, firstName=Sophia, lastName=Baker, birthdate=1975-06-16, email=Sophia.Baker@domain.com), startTime=2024-01-15 12:30:00.0, endTime=2024-01-15 13:45:00.0, activityType=CYCLING, distance=18.7, averageSpeed=15.3)]
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [5]
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Sophia.Baker@domain.com
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:15.523+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Sophia.Baker@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Sophia.Baker@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:16 +0200 (CEST)
+To: Sophia.Baker@domain.com
+Message-ID: <1912060778.14.1718540476281@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:19.435+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Liam.Jones@domain.com
+2024-06-16T14:21:19.435+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [6]
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=6, user=User(id=6, firstName=Liam, lastName=Jones, birthdate=2001-06-16, email=Liam.Jones@domain.com), startTime=2024-01-14 09:00:00.0, endTime=2024-01-14 10:15:00.0, activityType=WALKING, distance=3.5, averageSpeed=4.0)]
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [6]
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Liam.Jones@domain.com
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:19.440+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Liam.Jones@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Liam.Jones@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:20 +0200 (CEST)
+To: Liam.Jones@domain.com
+Message-ID: <645558767.15.1718540480195@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Ava.Williams@domain.com
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [7]
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=7, user=User(id=7, firstName=Ava, lastName=Williams, birthdate=2003-06-16, email=Ava.Williams@domain.com), startTime=2024-01-13 16:45:00.0, endTime=2024-01-13 18:30:00.0, activityType=RUNNING, distance=15.0, averageSpeed=10.8)]
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [7]
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Ava.Williams@domain.com
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:23.338+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Ava.Williams@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Ava.Williams@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:24 +0200 (CEST)
+To: Ava.Williams@domain.com
+Message-ID: <586379163.16.1718540484080@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Noah.Miller@domain.com
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [8]
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=8, user=User(id=8, firstName=Noah, lastName=Miller, birthdate=1985-06-16, email=Noah.Miller@domain.com), startTime=2024-01-12 11:30:00.0, endTime=2024-01-12 12:45:00.0, activityType=CYCLING, distance=22.5, averageSpeed=17.2)]
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [8]
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Noah.Miller@domain.com
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:27.190+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Noah.Miller@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Noah.Miller@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:27 +0200 (CEST)
+To: Noah.Miller@domain.com
+Message-ID: <2041335257.17.1718540487964@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Grace.Anderson@domain.com
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [9]
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=9, user=User(id=9, firstName=Grace, lastName=Anderson, birthdate=1991-06-16, email=Grace.Anderson@domain.com), startTime=2024-01-11 07:15:00.0, endTime=2024-01-11 08:30:00.0, activityType=WALKING, distance=4.2, averageSpeed=4.5)]
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [9]
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Grace.Anderson@domain.com
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:31.133+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Grace.Anderson@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Grace.Anderson@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:31 +0200 (CEST)
+To: Grace.Anderson@domain.com
+Message-ID: <2080220328.18.1718540491905@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Sending email to Oliver.Swift@domain.com
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with argument[s] = [10]
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.training.internal.TrainingServiceImpl.getTrainingsByUserId() with result = [Training(id=10, user=User(id=10, firstName=Oliver, lastName=Swift, birthdate=1995-06-16, email=Oliver.Swift@domain.com), startTime=2024-01-10 14:00:00.0, endTime=2024-01-10 15:15:00.0, activityType=RUNNING, distance=11.8, averageSpeed=8.5)]
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Enter: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with argument[s] = [10]
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.statistics.internal.StatisticsServiceImpl.getStatisticsByUserId() with result = []
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Creating email for Oliver.Swift@domain.com
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : 
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+2024-06-16T14:21:35.050+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Email created
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "sandbox.smtp.mailtrap.io", port 2525, isSSL false
+220 smtp.mailtrap.io ESMTP ready
+DEBUG SMTP: connected to host "sandbox.smtp.mailtrap.io", port: 2525
+EHLO 192.168.1.23
+250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+DEBUG SMTP: Found extension "SIZE", arg "5242880"
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN CRAM-MD5"
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: protocolConnect login, host=sandbox.smtp.mailtrap.io, user=cc002860e452ae, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<system@trainings.com>
+250 2.1.0 Ok
+RCPT TO:<Oliver.Swift@domain.com>
+250 2.1.0 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   Oliver.Swift@domain.com
+DATA
+354 Go ahead
+Date: Sun, 16 Jun 2024 14:21:35 +0200 (CEST)
+To: Oliver.Swift@domain.com
+Message-ID: <1490405572.19.1718540495834@trainings.com>
+Subject: Training report
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+________________________________________________________________
+Report generated from the "Training" table.
+Number of training sessions 1.
+________________________________________________________________
+Report generated from the "Statistics" table.
+Total number of trainings 0.
+________________________________________________________________
+.
+250 2.0.0 Ok: queued
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+2024-06-16T14:21:38.986+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.n.internal.ReportToEmail         : Generation of training reports finished
+2024-06-16T14:21:38.986+02:00  INFO 19248 --- [   scheduling-1] c.c.w.f.aop.logging.LoggingAspect        : Exit: com.capgemini.wsb.fitnesstracker.notification.internal.ReportToEmail.generateReport() with result = null
+2024-06-16T14:21:42.936+02:00  INFO 19248 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16T14:21:42.936+02:00  INFO 19248 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-16T14:21:42.936+02:00  INFO 19248 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+Process finished with exit code 130

@@ -1,0 +1,352 @@
+{
+	"id": "f769cc54-0612-45fb-b818-670565656473",
+	"name": "Training",
+	"timestamp": "2024-06-16T17:47:08.237Z",
+	"collection_id": "35813982-8809144e-995d-490b-b721-337b7a5000c5",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 24,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-16T17:47:07.157Z",
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "491634c7-177d-4e3f-b2fa-f56cc5d34e6e",
+			"name": "utworzenie nowego treningu",
+			"url": "http://localhost:8080/v1/trainings",
+			"time": 8,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"User object should exist and have required properties": true,
+				"Start time and end time are in valid date format": false,
+				"Activity type is a non-empty string": true,
+				"Distance and average speed are non-negative numbers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User object should exist and have required properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Start time and end time are in valid date format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Activity type is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Distance and average speed are non-negative numbers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"User object should exist and have required properties": true,
+					"Start time and end time are in valid date format": false,
+					"Activity type is a non-empty string": true,
+					"Distance and average speed are non-negative numbers": true
+				}
+			]
+		},
+		{
+			"id": "9c9626e2-7a2b-49e6-9379-d4a11b5b551b",
+			"name": "wyszukiwanie wszystkich treningów",
+			"url": "localhost:8080/v1/trainings",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"User object structure is as expected": true,
+				"Start time and end time should be in valid date format": false,
+				"ActivityType should be a non-empty string": true,
+				"Distance and averageSpeed are non-negative numbers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User object structure is as expected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Start time and end time should be in valid date format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"ActivityType should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Distance and averageSpeed are non-negative numbers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"User object structure is as expected": true,
+					"Start time and end time should be in valid date format": false,
+					"ActivityType should be a non-empty string": true,
+					"Distance and averageSpeed are non-negative numbers": true
+				}
+			]
+		},
+		{
+			"id": "c7a7c43c-b393-40b9-b344-7f694612b840",
+			"name": "wyszukiwanie treningów dla określonego Użytkownika",
+			"url": "localhost:8080/v1/trainings/user/3",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type is application/json": true,
+				"Id field is a non-negative integer": true,
+				"User object has non-empty firstName, lastName, birthdate, and email fields": false,
+				"Start time and end time should be in valid date-time format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User object has non-empty firstName, lastName, birthdate, and email fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Start time and end time should be in valid date-time format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type is application/json": true,
+					"Id field is a non-negative integer": true,
+					"User object has non-empty firstName, lastName, birthdate, and email fields": false,
+					"Start time and end time should be in valid date-time format": true
+				}
+			]
+		},
+		{
+			"id": "ecd8f261-9573-4811-9873-6bd690866a27",
+			"name": "wyszukiwanie wszystkich treningów zakończonych (po konkretnej zdefiniowanej dacie)",
+			"url": "localhost:8080/v1/trainings/after/2024-01-19",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content type is application/json": true,
+				"User object should exist and have the required properties": true,
+				"Start time and end time are in a valid date format": false,
+				"Distance and average speed are non-negative numbers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User object should exist and have the required properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Start time and end time are in a valid date format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Distance and average speed are non-negative numbers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content type is application/json": true,
+					"User object should exist and have the required properties": true,
+					"Start time and end time are in a valid date format": false,
+					"Distance and average speed are non-negative numbers": true
+				}
+			]
+		},
+		{
+			"id": "18523639-8384-4fcb-9c44-5e022537837d",
+			"name": "wyszukiwanie wszystkich treningów dla konkretnej aktywności (np. wszystkie treningi biegowe)",
+			"url": "http://localhost:8080/v1/trainings/activity?activity=WALKING",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"User object should exist and have specific properties": true,
+				"Start time and end time are in valid date-time format": false,
+				"Distance and average speed should be non-negative numbers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User object should exist and have specific properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Start time and end time are in valid date-time format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Distance and average speed should be non-negative numbers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"User object should exist and have specific properties": true,
+					"Start time and end time are in valid date-time format": false,
+					"Distance and average speed should be non-negative numbers": true
+				}
+			]
+		},
+		{
+			"id": "a4157c3e-418e-4025-b456-7bbee755ef95",
+			"name": "aktualizacja treningu (dowolnie wybrane pole np. dystans)",
+			"url": "http://localhost:8080/v1/trainings/3",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Id field is present and non-negative": true,
+				"Start time and end time are in valid date-time format": false,
+				"Activity type must be a non-empty string": true,
+				"Distance and averageSpeed should be non-negative numbers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id field is present and non-negative": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Start time and end time are in valid date-time format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Activity type must be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Distance and averageSpeed should be non-negative numbers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Id field is present and non-negative": true,
+					"Start time and end time are in valid date-time format": false,
+					"Activity type must be a non-empty string": true,
+					"Distance and averageSpeed should be non-negative numbers": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 58,
+	"collection": {
+		"requests": [
+			{
+				"id": "491634c7-177d-4e3f-b2fa-f56cc5d34e6e",
+				"method": "POST"
+			},
+			{
+				"id": "9c9626e2-7a2b-49e6-9379-d4a11b5b551b",
+				"method": "GET"
+			},
+			{
+				"id": "c7a7c43c-b393-40b9-b344-7f694612b840",
+				"method": "GET"
+			},
+			{
+				"id": "ecd8f261-9573-4811-9873-6bd690866a27",
+				"method": "GET"
+			},
+			{
+				"id": "18523639-8384-4fcb-9c44-5e022537837d",
+				"method": "GET"
+			},
+			{
+				"id": "a4157c3e-418e-4025-b456-7bbee755ef95",
+				"method": "PUT"
+			}
+		]
+	}
+}
